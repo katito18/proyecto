@@ -1,0 +1,64 @@
+h1{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 45px;
+    font-weight:200%;
+    font-style: oblique;
+    text-align: center;
+    text-transform: none;
+    color: #004900;
+}
+h2{
+    text-transform: uppercase;
+    text-align: center;
+}
+h3{
+    text-transform: capitalize;
+    text-align: right;
+}
+body{
+    margin:75px;
+    /*background-color: #f1c0ff;*/
+}
+
+a{
+    color:#1f5970;
+    font-size: larger;
+}
+p, li{
+ font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+ font-size: 17px;
+}
+
+  .caza-reciclaje {
+    text-align: center;
+    background: #eef6ff;
+    padding: 20px;
+    border-radius: 12px;
+    max-width: 350px;
+    margin: 20px auto;
+    font-family: sans-serif;
+  }
+  #zona-juego {
+    height: 110px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    border: 2px dashed #90caf9;
+    border-radius: 10px;
+    margin: 15px 0;
+  }
+  #objetivo {
+    font-size: 50px;
+    cursor: pointer;
+    user-select: none;
+    transition: transform 0.1s;
+  }
+  #objetivo:active { transform: scale(0.85); }
+
+textarea{
+min-height:50px;
+max-height:80px;/*altura*/
+min-width:200px;
+max-width:300px;/*anchura*/
+}  

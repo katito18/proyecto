@@ -1,0 +1,64 @@
+h1{
+    font-size: 45px;
+    font-weight:200%;
+    font-style: oblique;
+    text-transform: uppercase;
+}
+h2,h3{
+    text-transform: capitalize;
+}
+h1,h2,h3{
+    text-align: left;
+    color: rgb(50, 73, 64);
+}
+h1,h3,h2,p{
+    font-family:Arial, Helvetica, sans-serif;
+}
+p,li,ul{
+    font-size:17px ;
+    text-align: justify;
+    word-spacing: 19%;
+    letter-spacing: 9%;
+}
+body{
+    margin:78px;
+    margin-right: 78px;
+    border: 3px dashed #195e36;
+    padding: 16px;
+    border-radius: 5px;
+    background-color: #f5fffc;
+
+}
+a{
+    font-size:17px ;
+    text-align: justify;
+    word-spacing: 19%;
+    letter-spacing: 9%;
+    color:#5d1f70;
+    font-size: larger;
+    text-transform: capitalize;
+}
+.pap, .plas , .met, .vidr , .org , .escuela , .call , .calle{
+    width: 280px;
+    height: 150px;
+}
+.las3r{
+    width: 300px;
+    height: 170px;
+}
+
+ol il{
+    text-align:center;
+}
+.katia{
+    width: 300px;
+    height: 170px;
+}
+.kati{
+    width: 280px;
+    height: 180px;
+}
+.fo{
+    width: 300px;
+    height: 170px;
+}

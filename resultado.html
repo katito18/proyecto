@@ -1,11 +1,12 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resultados de la Encuesta</title>
     <link rel="stylesheet" href="r.css">
 </head>
+
 <body>
     <header>
         <nav>
@@ -19,36 +20,65 @@
     <main class="resultado-container">
         <h1>¡Gracias por compartir tus respuestas!</h1>
 
-        <?php
-        if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        <div class="card-resultado">
 
-        $nombre = htmlspecialchars($_POST['nombre']);
-            $edad = htmlspecialchars($_POST['edad']);
-            $grupo = htmlspecialchars($_POST['grupo']);
-            $residuo = htmlspecialchars($_POST['residuo_frecuente']);
-            $separas = htmlspecialchars($_POST['separas']);
-            $accion = htmlspecialchars($_POST['accion']);
-            $comentario = htmlspecialchars($_POST['comentario']);
+            <p><strong>Nombre del estudiante:</strong>
+                <span id="nombre"></span>
+            </p>
 
-            echo "<div class='card-resultado'>";
-            echo "<p><strong>Nombre del estudiante:</strong> $nombre</p>";
-            echo "<p><strong>Edad:</strong> $edad años</p>";
-            echo "<p><strong>Grupo escolar:</strong> $grupo </p>";
-            echo "<p>El residuo que produces con más frecuencia es: <strong>$residuo</strong>.</p>";
-            echo "<p>Tu respuesta sobre la separación de residuos fue: <strong>$separas</strong>.</p>";
-            echo "<p>La actividad que elegiste para proteger el medio ambiente es: <strong>$accion</strong>.</p>";
-            if (!empty($comentario)) {
-                echo "<p><strong>Tu opinión:</strong> \"$comentario\"</p>";
-            }
-            echo "<br><p class='destacado'>¡Gracias por participar! Recuerda que separar los residuos y reciclar ayuda a mantener limpia nuestra escuela y a proteger el planeta.</p>";
-            echo "</div>";
-        } else {
-            echo "<p>No se encontraron respuestas de la encuesta.</p>";
-        }
-        ?>
+            <p><strong>Edad:</strong>
+                <span id="edad"></span> años
+            </p>
+
+            <p><strong>Grupo escolar:</strong>
+                <span id="grupo"></span>
+            </p>
+
+            <p>El residuo que produces con más frecuencia es:
+                <strong id="residuo"></strong>.
+            </p>
+
+            <p>Tu respuesta sobre la separación de residuos fue:
+                <strong id="separas"></strong>.
+            </p>
+
+            <p>La actividad que elegiste para proteger el medio ambiente es:
+                <strong id="accion"></strong>.
+            </p>
+
+            <p><strong>Tu opinión:</strong>
+                <span id="comentario"></span>
+            </p>
+
+            <br>
+
+            <p class="destacado">
+                ¡Gracias por participar! Recuerda que separar los residuos
+                y reciclar ayuda a mantener limpia nuestra escuela
+                y a proteger el planeta.
+            </p>
+
+        </div>
 
         <br>
-        <a href="index.html" class="btn-volver">Volver a la página principal</a>
+
+        <a href="index.html" class="btn-volver">
+            Volver a la página principal
+        </a>
+
     </main>
+
+    <script>
+        const parametros = new URLSearchParams(window.location.search);
+
+        document.getElementById("nombre").textContent = parametros.get("nombre");
+        document.getElementById("edad").textContent = parametros.get("edad");
+        document.getElementById("grupo").textContent = parametros.get("grupo");
+        document.getElementById("residuo").textContent = parametros.get("residuo_frecuente");
+        document.getElementById("separas").textContent = parametros.get("separas");
+        document.getElementById("accion").textContent = parametros.get("accion");
+        document.getElementById("comentario").textContent = parametros.get("comentario");
+    </script>
+
 </body>
 </html>
